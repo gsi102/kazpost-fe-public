@@ -1,0 +1,40 @@
+$adviceWidth: 300px;
+$adviceBorder: 4px solid var(--focus-hard-color);
+
+.clause {
+  display: flex;
+  align-items: center;
+
+  .child:first-child {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.advice {
+  margin: 0 10px;
+  cursor: default;
+  position: relative;
+
+  div {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    padding: 10px;
+    left: -$adviceWidth;
+    line-height: 1.4rem;
+    max-width: $adviceWidth;
+    background-color: white;
+    border: $adviceBorder;
+    border-radius: 10px;
+    transform: translateY(-50%);
+  }
+
+  &:hover > div {
+    display: block;
+  }
+}
+
+.img {
+  width: 270px;
+}

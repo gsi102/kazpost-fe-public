@@ -1,0 +1,73 @@
+.SelectWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 200px;
+
+  span {
+    pointer-events: none;
+    display: block;
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    right: 6px;
+    background-color: rgb(227, 227, 227);
+    border: 2px solid rgb(136, 136, 136);
+    border-radius: 2px;
+
+    &::before,
+    &::after {
+      display: block;
+      position: absolute;
+      top: 50%;
+      content: "";
+      width: 6px;
+      height: 2px;
+      background-color: rgb(136, 136, 136);
+    }
+    &::before {
+      left: 0;
+      transform: translate(15%, -50%) rotate(45deg);
+    }
+    &::after {
+      right: 0;
+      transform: translate(-15%, -50%) rotate(-45deg);
+    }
+  }
+}
+
+.Select {
+  position: relative;
+  width: 100%;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(227, 227, 227);
+  transition: all 0.2ms linear;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+
+  &:not(:disabled):hover {
+    box-shadow: 0 0 1px 1px rgb(136, 136, 136, 0.5);
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &:disabled {
+    background-color: rgb(227, 227, 227, 0.5);
+  }
+  &:disabled ~ * {
+    background-color: rgb(227, 227, 227, 0.5);
+    border: 2px solid rgb(136, 136, 136, 0.3);
+    &::before,
+    &::after {
+      background-color: rgb(136, 136, 136, 0.3);
+    }
+  }
+}

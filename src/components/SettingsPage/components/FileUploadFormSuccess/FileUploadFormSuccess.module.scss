@@ -1,0 +1,38 @@
+.FileUploadFormSuccess {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+}
+
+.statistics {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  p:nth-child(2) {
+    color: var(--success-color);
+  }
+
+  p:nth-child(3) {
+    color: var(--error-color);
+  }
+}
+
+.Button {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid var(--text-color);
+  border-radius: 10px;
+  padding: 10px 20px;
+  transition: all var(--transition-duration-quick) linear;
+
+  &:hover {
+    background-color: var(--focus-hard-color);
+    box-shadow: var(--box-shadow-dark);
+  }
+}

@@ -1,0 +1,43 @@
+.TracksPagination {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.inputToPage {
+  width: 40px;
+  margin-left: 5px;
+  padding: 5px;
+  box-shadow: var(--box-shadow-light);
+  border: 1px solid var(--highlight-light);
+  transition: all 0.2s linear;
+
+  &::placeholder {
+    color: var(--highlight-light);
+  }
+
+  &:focus {
+    box-shadow: var(--box-shadow-dark);
+  }
+}
+
+.button {
+  padding: 3px;
+  border-radius: 2px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.select {
+  padding: 5px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.pageCounter {
+  display: flex;
+  align-items: center;
+}
+
+.Preloader {
+  width: 20px;
+}

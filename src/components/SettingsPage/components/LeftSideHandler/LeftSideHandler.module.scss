@@ -1,0 +1,30 @@
+@import "../../SettingsPage.module.scss";
+
+.leftSideOption {
+  padding: 1.5rem 1rem;
+  margin-bottom: 1rem;
+  border-radius: 10px;
+
+  input {
+    display: none;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.leftSideOption:has(input:disabled) {
+  background-color: rgb(238, 238, 238, 0.8);
+  border: 1px solid rgb(238, 238, 238, 0.8);
+}
+
+.leftSideOption:has(input:not(:checked):not(:disabled)) {
+  background-color: unset;
+  border: 1px solid var(--overlay-color);
+}
+
+.leftSideOption:has(input:checked) {
+  background-color: var(--focus-hard-color);
+  border: 1px solid var(--focus-hard-color);
+}

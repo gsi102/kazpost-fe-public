@@ -1,0 +1,31 @@
+.inputContainer {
+  display: grid;
+  grid-template-columns: 80% 20%;
+  grid-auto-rows: 30px;
+  align-items: center;
+
+  & > * {
+    margin: 0 auto;
+  }
+}
+
+.Input {
+  width: 100%;
+  padding: 5px;
+  box-shadow: var(--box-shadow-light);
+  border: 1px solid var(--highlight-light);
+  transition: all 0.2s linear;
+
+  &:focus {
+    box-shadow: var(--box-shadow-dark);
+  }
+}
+
+.imgRequestStatus {
+  width: 16px;
+  height: 16px;
+}
+
+.Preloader {
+  width: 128px;
+}

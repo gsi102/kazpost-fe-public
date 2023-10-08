@@ -1,0 +1,47 @@
+.marginBottom {
+  margin-bottom: 20px !important;
+}
+
+.Preloader {
+  width: 128px;
+  margin: 0 auto;
+}
+.error {
+  margin: 50px;
+
+  div:nth-child(1) {
+    font-size: 3em;
+  }
+
+  div:nth-child(2) {
+    font-size: 1em;
+  }
+}
+
+.toggleActive {
+  margin: 20px 20px;
+  width: fit-content;
+}
+
+.toggleOthers {
+  padding: 1rem;
+  border-radius: 10px;
+  margin: 30px 0;
+}
+
+.mainSettings {
+  display: grid;
+  grid-template-columns: 300px auto;
+}
+
+.gridColumn {
+  padding: 0rem 20px 20px 20px;
+}
+
+.gridColumn:nth-child(2) {
+  border-left: 4px solid rgb(0, 0, 0, 0.6);
+}
+
+.Select {
+  margin-left: 10px;
+}

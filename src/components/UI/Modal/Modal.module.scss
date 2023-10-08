@@ -1,0 +1,78 @@
+.Modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(255, 255, 255, 0.4);
+  backdrop-filter: blur(12.5px);
+}
+
+.content {
+  padding: 4.8rem 5rem 2.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transform-origin: 0 0;
+  transition: transform var(--transition-duration);
+  background-color: rgba(255, 255, 255);
+  max-width: 650px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 1;
+  letter-spacing: -0.07em;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.closeButton {
+  border: none;
+  border-bottom: 1px solid var(--overlay-color);
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin: 1.5rem auto;
+  margin-bottom: 0;
+  transition: all 350ms ease;
+  color: var(--overlay-color);
+  cursor: pointer;
+
+  & > svg > path {
+    transition: all 0.6s ease;
+    fill: var(--overlay-color);
+  }
+
+  &:hover,
+  &:focus,
+  &:focus-visible {
+    color: var(--overlay-color-dark);
+    border-bottom: 1px solid var(--overlay-color-dark);
+
+    & > svg > path {
+      fill: var(--overlay-color-dark);
+    }
+  }
+}
+
+.loading {
+  min-width: 200px;
+}

@@ -1,0 +1,74 @@
+.Checkbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  .Input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.checkmark {
+  position: absolute;
+  left: 0;
+  height: 15px;
+  width: 15px;
+  border-radius: 2px;
+  background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.Checkbox:hover input:not(:disabled):not(:checked) ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.Checkbox input:checked ~ .checkmark {
+  background-color: rgb(32, 191, 85);
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.Checkbox input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.Checkbox .checkmark:after {
+  left: 50%;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  -webkit-transform: translateX(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(45deg);
+}
+
+.text {
+  padding-left: 25px;
+}
+
+.disabledtext {
+  color: #b2b2b2 !important;
+}

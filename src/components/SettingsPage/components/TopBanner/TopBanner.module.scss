@@ -1,0 +1,63 @@
+.logo {
+  margin: 1.5rem 0;
+}
+
+.bannerCollapse {
+  transform: translateY(-100%);
+}
+
+.freeConfiguration {
+  transition: all 0.5s linear;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--focus-hard-color);
+  width: 100vw;
+  padding: 1rem 0;
+
+  a {
+    border-bottom: 1px solid black;
+    display: inline-block;
+    transition: all 0.2s linear;
+
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-1px) scale(1.02);
+    }
+  }
+}
+
+.closeFreeConfiguration {
+  display: block;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 50px;
+  cursor: pointer;
+
+  &:hover::before,
+  &:hover::after {
+    background-color: rgb(44 62 80 / 100%);
+  }
+
+  &::before,
+  &::after {
+    transition: all 0.2s linear;
+    position: absolute;
+    top: 50%;
+    content: "";
+    display: block;
+    width: 20px;
+    height: 2px;
+    background-color: var(--overlay-color);
+  }
+
+  &::before {
+    transform: translate(0, -50%) rotate(45deg);
+  }
+
+  &::after {
+    transform: translate(0, -50%) rotate(-45deg);
+  }
+}

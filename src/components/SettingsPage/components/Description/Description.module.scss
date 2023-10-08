@@ -1,0 +1,14 @@
+.imgBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+
+  img {
+    border: 1px solid var(--highlight-light);
+  }
+
+  .caption {
+    text-align: center;
+  }
+}

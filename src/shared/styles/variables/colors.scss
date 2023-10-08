@@ -1,0 +1,20 @@
+:root {
+  // common colors only, not depending on themes
+  --text-color: rgb(0, 0, 0, 0.8);
+  --overlay-color-dark: rgb(44 62 80 / 60%);
+  --overlay-color: rgb(0, 0, 0, 0.2);
+  --overlay-color-light: rgb(160 156 204 / 10%);
+  --error-color: #f04b4b;
+  --error-color-light: rgb(240 75 75 / 10%);
+  --success-color: rgb(32, 191, 85);
+  --attachment-success: rgb(113, 159, 237);
+  --attachment-size-color: rgb(29, 57, 105);
+  --focus-middle-color: #fffb8c;
+  --focus-hard-color: rgb(201, 219, 250);
+  --highlight-light: rgb(130, 118, 106, 0.1);
+  --box-shadow-light: 1px 1px 10px rgb(130, 118, 106, 0.1);
+  --highlight-middle: rgb(130, 118, 106, 0.5);
+  --box-shadow-dark: 1px 1px 10px rgb(130, 118, 106, 0.5);
+  --svg-filter-dark: invert(41%) sepia(0%) saturate(1847%) hue-rotate(257deg)
+    brightness(92%) contrast(85%);
+}

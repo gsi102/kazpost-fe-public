@@ -1,0 +1,57 @@
+@import "../../SettingsPage.module.scss";
+
+.TracksHeader {
+  position: relative;
+  display: flex;
+  width: fit-content;
+  gap: 10px;
+}
+
+.Preloader {
+  position: absolute;
+  bottom: 0;
+  right: -30px;
+  width: 30px;
+}
+
+.RequestStatus {
+  position: absolute;
+  bottom: 0;
+  right: -30px;
+  width: 24px;
+  height: 24px;
+}
+
+.input {
+  width: 300px;
+  padding: 5px;
+  box-shadow: var(--box-shadow-light);
+  border: 1px solid var(--highlight-light);
+  transition: all var(--transition-duration-quick) linear;
+
+  &::placeholder {
+    color: var(--highlight-middle);
+  }
+
+  &:focus {
+    box-shadow: var(--box-shadow-dark);
+  }
+}
+
+.button,
+.uploadButton {
+  background-color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  border: 1px solid rgb(0, 0, 0, 0.6);
+  border-radius: 10px;
+  transition: all var(--transition-duration-quick) linear;
+
+  &:hover {
+    cursor: pointer;
+    box-shadow: var(--box-shadow-dark);
+  }
+}
+
+.uploadButton {
+  background-color: var(--focus-hard-color);
+}

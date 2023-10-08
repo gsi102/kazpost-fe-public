@@ -1,0 +1,93 @@
+.fader-appear,
+.fader-enter {
+  opacity: 0;
+}
+
+.fader-appear-active,
+.fader-enter-active {
+  opacity: 1;
+  transition: opacity var(--fader-velocity);
+}
+
+.fader-appear-done,
+.fader-enter-done {
+  opacity: 1;
+}
+
+.fader-exit {
+  opacity: 1;
+}
+
+.fader-exit-active {
+  opacity: 0;
+  transition: opacity var(--fader-velocity);
+}
+
+.fader-exit-done {
+  opacity: 0;
+}
+
+.fader-sliding-appear,
+.fader-sliding-enter {
+  transform: translateY(-100%);
+}
+
+.fader-sliding-appear-active,
+.fader-sliding-enter-active {
+  transform: translateY(0);
+  transition: transform var(--fader-velocity);
+}
+
+.fader-sliding-appear-active {
+  transform: translateY(0);
+}
+
+.fader-sliding-appear-done,
+.fader-sliding-enter-done {
+  transform: translateY(0);
+}
+
+.fader-sliding-exit {
+  transform: translateY(0);
+}
+
+.fader-sliding-exit-active {
+  transform: translateY(-100%);
+  transition: transform var(--fader-velocity);
+}
+
+.fader-sliding-exit-done {
+  transform: translateY(-100%);
+}
+
+.fader-scaling-enter {
+  transform: scale(0.5);
+}
+
+.fader-scaling-appear-active,
+.fader-scaling-enter-active {
+  transform: scale(1);
+  transition: transform var(--fader-velocity);
+}
+
+.fader-scaling-appear-active {
+  transform: scale(1);
+}
+
+.fader-scaling-appear-done,
+.fader-scaling-enter-done {
+  transform: scale(1);
+}
+
+.fader-scaling-exit {
+  transform: scale(1);
+}
+
+.fader-scaling-exit-active {
+  transform: scale(0.5);
+  transition: transform var(--fader-velocity);
+}
+
+.fader-scaling-exit-done {
+  transform: scale(0.5);
+}

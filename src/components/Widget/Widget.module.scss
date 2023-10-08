@@ -1,0 +1,19 @@
+.Widget {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.Button {
+  padding: 10px;
+  background-color: var(--focus-hard-color);
+}
+
+.Preloader {
+  width: 32px;
+}
+
+.RequestStatus {
+  height: 24px;
+  width: 24px;
+}
